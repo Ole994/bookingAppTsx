@@ -1,0 +1,17 @@
+// /my-project
+//   ├── /src
+//   │   ├── /components  (frontend kode)
+//   │   └── /server      (backend kode)
+//   ├── tsconfig.json          (hovedkonfigurasjon)
+//   ├── tsconfig.app.json      (frontend-konfigurasjon)
+//   └── tsconfig.node.json     (backend-konfigurasjon)
+
+
+
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
