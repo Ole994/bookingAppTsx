@@ -1,33 +1,22 @@
-// {
-//   "extends": "./tsconfig.base.json",
-//   "compilerOptions": {
-//     "outDir": "./dist/node",  // Output for backend
-//     "target": "es2020",       // Passer for Node.js
-//     "module": "commonjs"      // Bruk CommonJS-moduler (Node.js standard)
-//   },
-//   "include": ["src/server/**/*"]  // Kun backend-kode
-// }
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-    "target": "ES2022",
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.cache/tsconfig.node.tsbuildinfo",
+    "target": "ES2023",
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
-
-    /* Bundler mode */
     "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
-
-    /* Linting */
+    "emitDeclarationOnly": true, // Kun deklarasjoner genereres
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedIndexedAccess": true
   },
   "include": ["vite.config.ts"]
 }
+
