@@ -65,10 +65,9 @@
   "exclude": [
     "node_modules"
   ],
-  "lint-staged": {
+"lint-staged": {
   "*.{js,jsx,ts,tsx}": [
-    "eslint --fix",
-    "git add"
+    "eslint --fix"
   ]
 }
 
