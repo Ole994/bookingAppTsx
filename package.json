@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prepare": "husky install",
-     "test": "echo \"No tests defined\" && exit 0"
+    "test": "echo \"No tests defined\" && exit 0"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -65,10 +65,10 @@
   "exclude": [
     "node_modules"
   ],
-"lint-staged": {
-  "*.{js,jsx,ts,tsx}": [
-    "eslint --fix"
-  ]
-}
-
+  "lint-staged": {
+    "*.ts": "eslint --fix",
+    "*.tsx": "eslint --fix",
+    "*.js": "eslint --fix",
+    "*.json": "prettier --write"
+  }
 }
